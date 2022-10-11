@@ -1,15 +1,16 @@
-
 local plugins = {
-    "yamatsum/nvim-cursorline",
-    "karb94/neoscroll.nvim",
-    "goolord/alpha-nvim",    
-    "nvim-treesitter/nvim-treesitter",
-    "nvim-telescope/telescope.nvim",
-    "nvim-lua/plenary.nvim",
-    "antoinemadec/FixCursorHold.nvim",
-    "lambdalisue/fern.vim",
-    "catppuccin/nvim",
-    "neovim/nvim-lspconfig",
+    "yamatsum/nvim-cursorline", -- highlight word/line under cursor
+    "karb94/neoscroll.nvim", -- smooth scrolling
+    "goolord/alpha-nvim", -- chad start-up menu 
+    "nvim-treesitter/nvim-treesitter", -- syntax highlighting
+    "nvim-telescope/telescope.nvim", -- observe the project's galaxy
+    "nvim-lua/plenary.nvim", -- dependency for Telescope
+    "antoinemadec/FixCursorHold.nvim", -- dependency for Fern
+    "lambdalisue/fern.vim", -- file explorer
+    "catppuccin/nvim", -- cute UwU theme
+    "neovim/nvim-lspconfig", -- super fast coding
+    
+    -- BLAZINGLY fast coding !!!
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
@@ -17,10 +18,11 @@ local plugins = {
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",	
-    "kyazdani42/nvim-web-devicons",
-    "romgrk/barbar.nvim",
-    "phaazon/hop.nvim",
-    "andweeb/presence.nvim",
+
+    "kyazdani42/nvim-web-devicons", -- nerdy icons
+    "romgrk/barbar.nvim", -- tab bar
+    "phaazon/hop.nvim", -- walk thru code just like a little bunny
+    "andweeb/presence.nvim", -- let everyone know u are using the BEST code editor ever!
 }
 
 vim.call("plug#begin", "~/.config/nvim/plugged")
@@ -31,8 +33,6 @@ end
 
 vim.call("plug#end")
 
--- single configurations
-
 require("configs.alpha")
 require("configs.cmp")
 require("configs.catppuccin")
@@ -42,6 +42,6 @@ require("nvim-cursorline").setup({
 })
 
 require("presence"):setup()
-
 require("hop").setup()
 require("neoscroll").setup()
+

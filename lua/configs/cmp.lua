@@ -6,20 +6,15 @@ cmp.setup({
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  },
+  window = {},
   mapping = cmp.mapping.preset.insert({
     ["<C-Space>"] = cmp.mapping.complete(),
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
   }),
-  sources = cmp.config.sources({
-    { name = "nvim_lsp" },
-    { name = "vsnip" },
-  }, {
-    { name = "buffer" },
-  })
+  sources = cmp.config.sources(
+    {{ name = "nvim_lsp" }, { name = "vsnip" }}, 
+    {{ name = "buffer" }}
+  )
 })
 
 cmp.setup.cmdline("/", {
@@ -39,6 +34,7 @@ cmp.setup.cmdline(":", {
 })
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 local lsp = require("lspconfig")
 
 lsp["rust_analyzer"].setup { capabilities = capabilities }
