@@ -27,9 +27,7 @@ local plugins = {
 
 vim.call("plug#begin", "~/.config/nvim/plugged")
 
-for idx = 1, #plugins do
-    vim.fn["plug#"](plugins[idx])
-end
+for idx = 1, #plugins do vim.fn["plug#"](plugins[idx]) end
 
 vim.call("plug#end")
 
@@ -43,5 +41,4 @@ require("nvim-cursorline").setup({
 
 require("presence"):setup()
 require("hop").setup()
-require("neoscroll").setup()
 

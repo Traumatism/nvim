@@ -3,7 +3,7 @@ vim.g.mapleader = " " -- set leader key to space
 
 vim.opt.rnu = true -- relative lines numbers
 vim.opt.guicursor = "" -- avoid single bar cursor
-vim.opt.guifont = "Iosevka Nerd Font" -- neovide font
+vim.opt.guifont = "CaskaydiaCove Nerd Font" -- neovide font
 vim.opt.wildignorecase = true -- ignore case in commands
 
 -- color support stuff

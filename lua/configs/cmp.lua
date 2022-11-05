@@ -33,10 +33,19 @@ cmp.setup.cmdline(":", {
   })
 })
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local lsp = require("lspconfig")
 
+-- best programming language
 lsp["rust_analyzer"].setup { capabilities = capabilities }
+
+-- just for school & hacking
 lsp["pyright"].setup { capabilities = capabilities }
+
+-- write programs that never segfault
 lsp["clangd"].setup { capabilities = capabilities }
+
+-- functionnal programming is hard but cute
+lsp["ocamllsp"].setup { capabilities = capabilities }
+
