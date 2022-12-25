@@ -47,10 +47,14 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-lsp.clangd.setup { capabilities = capabilities }
+lsp.clangd.setup {
+    capabilities = capabilities,
+}
 
--- best programming language
-lsp.rust_analyzer.setup { capabilities = capabilities }
+lsp.rust_analyzer.setup {
+    capabilities = capabilities,
+}
 
--- just for school & hacking
-lsp.pyright.setup { capabilities = capabilities }
+lsp.pyright.setup {
+    capabilities = capabilities,
+}

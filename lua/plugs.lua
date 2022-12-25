@@ -1,31 +1,50 @@
 local plugins = {
+    -- formatting
+    "lukas-reineke/lsp-format.nvim",
+    -- LSP symbols
     "onsails/lspkind.nvim",
-    "lervag/vimtex",
+    -- Cuter theme
     "catppuccin/nvim",
+    -- Completions engine
     "hrsh7th/nvim-cmp",
+    -- Path completions
     "hrsh7th/cmp-path",
+    -- Jump through file
     "phaazon/hop.nvim",
+    -- Evaluate maths
     "hrsh7th/cmp-calc",
+    -- Snippets
     "hrsh7th/cmp-vsnip",
-    "hrsh7th/vim-vsnip",	
+    "hrsh7th/vim-vsnip",
+    -- Buffer (words) completions
     "hrsh7th/cmp-buffer",
+    -- Jump between buffers
     "romgrk/barbar.nvim",
-    "cocopon/iceberg.vim",
-    "sts10/vim-pink-moon",
+    -- Command completions
     "hrsh7th/cmp-cmdline",
+    -- File explorer
     "lambdalisue/fern.vim",
+    -- LSP completions
     "hrsh7th/cmp-nvim-lsp",
+    -- Telescope dep
     "nvim-lua/plenary.nvim",
+    -- {[()]}
     "windwp/nvim-autopairs",
-    "nikolvs/vim-sunbather",
+    -- Manage LSP
     "neovim/nvim-lspconfig",
-    "numToStr/Comment.nvim",
+    -- Let everyone know you are using the best code editor
     "andweeb/presence.nvim",
+    -- Cool icons
     "nvim-tree/nvim-web-devicons",
+    -- Cool actions
     "nvim-telescope/telescope.nvim",
+    -- Cool icons bis
     "lambdalisue/glyph-palette.vim",
+    -- dep
     "antoinemadec/FixCursorHold.nvim",
+    -- Better syntax highlighting
     "nvim-treesitter/nvim-treesitter",
+    -- Icons in file explorer
     "TheLeoP/fern-renderer-web-devicons.nvim",
 }
 
@@ -37,11 +56,9 @@ end
 
 vim.call("plug#end")
 
-require("configs.lspkind")
 require("configs.autopairs")
 require("configs.catppuccin")
 require("configs.cmp")
-require("configs.comment")
 require("configs.devicons")
 require("configs.hop")
 require("configs.presence")

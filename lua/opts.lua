@@ -5,8 +5,6 @@ g["fern#renderer"] = "nvim-web-devicons"
 
 g.mapleader = " "
 g.neovide_refresh_rate = 65
-g.catppuccin_flavour = "frappe"
-g.neovide_cursor_vfx_mode = "railgun"
 g.neovide_scroll_animation_length = 0.5
 g.neovide_cursor_animation_length = 0.03
 
