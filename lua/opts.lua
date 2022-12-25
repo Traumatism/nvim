@@ -1,17 +1,22 @@
-vim.g.catppuccin_flavour = "mocha" -- cute cat theme ><
-vim.g.mapleader = " " -- set leader key to space
+local g = vim.g
+local opt = vim.opt
 
-vim.opt.rnu = true -- relative lines numbers
-vim.opt.guicursor = "" -- avoid single bar cursor
-vim.opt.guifont = "CaskaydiaCove Nerd Font" -- neovide font
-vim.opt.wildignorecase = true -- ignore case in commands
+g["fern#renderer"] = "nvim-web-devicons"
 
--- color support stuff
-vim.opt.termguicolors = true
+g.mapleader = " "
+g.neovide_refresh_rate = 65
+g.catppuccin_flavour = "frappe"
+g.neovide_cursor_vfx_mode = "railgun"
+g.neovide_scroll_animation_length = 0.5
+g.neovide_cursor_animation_length = 0.03
 
--- indentation stuff
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
-vim.opt.expandtab = true
-vim.opt.autoindent = true
+opt.rnu = true
+opt.tabstop = 4
+opt.guicursor = ""
+opt.shiftwidth = 4
+opt.softtabstop = 4
+opt.expandtab = true
+opt.smartindent = true
+opt.termguicolors = true
+opt.wildignorecase = true
+opt.guifont = "Iosevka Nerd Font"

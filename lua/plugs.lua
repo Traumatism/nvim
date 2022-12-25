@@ -1,44 +1,47 @@
 local plugins = {
-    "yamatsum/nvim-cursorline", -- highlight word/line under cursor
-    "karb94/neoscroll.nvim", -- smooth scrolling
-    "goolord/alpha-nvim", -- chad start-up menu 
-    "nvim-treesitter/nvim-treesitter", -- syntax highlighting
-    "nvim-telescope/telescope.nvim", -- observe the project's galaxy
-    "nvim-lua/plenary.nvim", -- dependency for Telescope
-    "antoinemadec/FixCursorHold.nvim", -- dependency for Fern
-    "lambdalisue/fern.vim", -- file explorer
-    "catppuccin/nvim", -- cute UwU theme
-    "neovim/nvim-lspconfig", -- super fast coding
-    
-    -- BLAZINGLY fast coding !!!
+    "onsails/lspkind.nvim",
+    "lervag/vimtex",
+    "catppuccin/nvim",
     "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
+    "phaazon/hop.nvim",
+    "hrsh7th/cmp-calc",
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",	
-
-    "kyazdani42/nvim-web-devicons", -- nerdy icons
-    "romgrk/barbar.nvim", -- tab bar
-    "phaazon/hop.nvim", -- walk thru code just like a little bunny
-    "andweeb/presence.nvim", -- let everyone know u are using the BEST code editor ever!
+    "hrsh7th/cmp-buffer",
+    "romgrk/barbar.nvim",
+    "cocopon/iceberg.vim",
+    "sts10/vim-pink-moon",
+    "hrsh7th/cmp-cmdline",
+    "lambdalisue/fern.vim",
+    "hrsh7th/cmp-nvim-lsp",
+    "nvim-lua/plenary.nvim",
+    "windwp/nvim-autopairs",
+    "nikolvs/vim-sunbather",
+    "neovim/nvim-lspconfig",
+    "numToStr/Comment.nvim",
+    "andweeb/presence.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "nvim-telescope/telescope.nvim",
+    "lambdalisue/glyph-palette.vim",
+    "antoinemadec/FixCursorHold.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "TheLeoP/fern-renderer-web-devicons.nvim",
 }
 
 vim.call("plug#begin", "~/.config/nvim/plugged")
 
-for idx = 1, #plugins do vim.fn["plug#"](plugins[idx]) end
+for idx = 1, #plugins do
+    vim.fn["plug#"](plugins[idx])
+end
 
 vim.call("plug#end")
 
-require("configs.alpha")
-require("configs.cmp")
+require("configs.lspkind")
+require("configs.autopairs")
 require("configs.catppuccin")
-
-require("nvim-cursorline").setup({
-  cursorword = { enable = true, min_length = 0, hl = { underline = false, bold = true } }
-})
-
-require("presence"):setup()
-require("hop").setup()
-
+require("configs.cmp")
+require("configs.comment")
+require("configs.devicons")
+require("configs.hop")
+require("configs.presence")
